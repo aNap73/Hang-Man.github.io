@@ -1,0 +1,94 @@
+Theme: 8bit zombie hangman
+
+
+Homework 3
+Use Bootstrap
+NavBar / Logo
+
+State 1)
+	Display Game Welcome
+	Req.  "Press any key to get started!"
+		Keypress is evaluated(State 2)
+
+State 2)
+	Game Run
+		Display Game
+		Req. "Wins: " <iCorrectGuesses>
+		Req. "Number of Guesses Remaining: " <iGuessesLeft> 
+		Req. "Letters Guessed Already: " <arrLetersGuessed>
+		Keypress is evaluated
+			hasn't been guessed
+			is a valid character
+			(true)
+				play character
+					match = check character vs array						
+					if (match) {
+						   }
+					else {nomatch}
+						  {
+						   }	
+State 3)
+	Game Over
+		
+
+Theme: 8 bit zombie hangman
+
+Game Home
+Title/Logo/Nav: 8 bit zombit hangman
+Zombie Arrest animation(s)
+
+Game Screen
+
+Title/Logo/Nav Area:
+Zombi Ani Area
+	Head
+	Body
+	Arm(l)
+	Arm(r)
+	Leg(l)
+	Leg(r)
+
+Game Play Area 
+	*Display blanks uncover blanks as word/phrase is guessed
+		"-he -a----- -ea-" --->The Walking Dead
+	"Wins: " <iCorrectGuesses>
+	"Number of Guesses Remaining: " <iGuessesLeft> 
+	"Letters Guessed Already: " <arrLetersGuessed>
+
+	Object Model
+		
+		8bitzombie
+			iGameState = 0
+			arrPossiblePhrase = [];
+			arrLetersGuessed = [];
+			sCurrentPhrase = "";
+			iCorrectGuesses = 0;
+	    iGuessesLeft = 6; 
+	
+			fn propGameState () 
+			{
+				return "Splash","Play","Over"
+			}
+			fn kpSplashHandler (e){
+				iGameState=1;
+				ResetGame();
+				UpdateScreen();
+			}	
+			fn kpPlayHandler (e) {}
+			fn kpOverHandler (e) {
+				iGameState=0;
+				UpdateScreen();
+			}
+			fn 
+			fn PlayKey (e)
+			
+			fn ResetGame()
+			{	
+						iGameState = 0
+						arrPossiblePhrase = [];
+						arrLetersGuessed = [];
+						sCurrentPhrase = "";
+						iCorrectGuesses = 0;
+	    			iGuessesLeft = 6;
+			}
+			fn UpdateScreen()
