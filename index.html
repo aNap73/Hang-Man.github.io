@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Zombie Hangman</title>
+  <link href="https://fonts.googleapis.com/css?family=Butcherman|Press+Start+2P|Rammetto+One" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-default mynavbar" id="mynavid">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <div class="mylogo">Zombie Hangman</div>            
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+           
+            <ul class="nav navbar-nav navbar-right">
+              <li class="mymenu"><a>Reset</a></li>
+              <li class="mymenu"><a>Options</a></li>
+              <li class="mymenu"><a>About</a></li>
+        
+
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+    <div class="container-fluid main">  
+    <div class = "jumbotron GameSplash">
+          <div class="SplashAni">
+             
+          </div>
+    </div> 
+    <div class = "jumbotron GameRun">
+        <div class="">
+            Running...
+        </div>
+    </div> 
+    <div class = "jumbotron GameOver">
+        <div class="">
+            Over...
+        </div>
+    </div> 
+    <div class="splashinstruct">
+        Hit any Key to Begin...the end...
+    </div>
+      <audio controls loop autoplay id="audioSplash" style="display:none"/><source src="./assets/sounds/MusicBack2.mp3" type="audio/mpeg" autoplay=true></audio>    
+    </div>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <!--script src="./assets/javascript/bootstrap.min.js"></script-->
+    <!--script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"--></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>
