@@ -88,6 +88,12 @@ function resetWin()
 }
 function kpDown (event) 
 {
+  if (typeof event === 'undefined' || !event) {
+    event = function(input){
+      this.key = "none";
+      this.code = "none";
+    }  
+     };
   if (sGameState=="Splash"){
     reset();
     sGameState="Run";
