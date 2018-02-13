@@ -91,10 +91,16 @@ function kpDown (event)
   if (typeof event === 'undefined' || !event) {
     event = function(input){
       this.key = "none";
-      this.code = "none";
+      this.sCode = "none"; 
+      this.code = function(input){
+        sCode = input;
+        function toString(){return sCode};
+        return sCode;
+      }     
     }  
-     };
-  if (sGameState=="Splash"){
+  }
+
+   if (sGameState=="Splash"){
     reset();
     sGameState="Run";
     SplashDiv.style = "display: none";
@@ -244,4 +250,3 @@ function mnMusicToggle(){
   }
 
 }
-

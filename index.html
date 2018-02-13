@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" href="./assets/css/style.css">
 </head>
-<body onkeydown="kpDown(event)" onmousedown="kpDown(event)">
+<body onkeyup="kpDown(event)" onmouseup="kpDown(event)">
 
     <nav class="navbar navbar-default mynavbar" id="mynavid">
         <div class="container-fluid">
@@ -37,7 +37,7 @@
              
           </div>
           <div class="splashinstruct" id="lbl">
-              Hit any Key to Begin...the end...
+              Hit any Key to Begin... the end...
           </div>
     </div> 
     <div class = "jumbotron GameRun container-fluid" id="RunDiv">
@@ -68,7 +68,7 @@
           <div class="col-md-12 gametracktext" id="divWon">
             Games Won: 0
           </div>
-          <div class="col-md-12 gametracktext textinput" id="txtinput"><input class="mobinput" onkeydown="kpDown(event)" placeholder="No Keyboard? Guess Here..."></input></div>
+          <div class="col-md-12 gametracktext textinput" id="txtinput"><input class="mobinput" onkeyup="kpDown(event)" placeholder="No Keyboard? Guess Here..."></input></div>
         
      </div>
     
