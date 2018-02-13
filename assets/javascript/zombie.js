@@ -90,16 +90,23 @@ function kpDown (event)
 {
   if (typeof event === 'undefined' || !event) {
     event = function(input){
-      this.key = "none";
+      this.sKey = "none";
       this.sCode = "none"; 
+      this.key = function(input){
+        sKey = input;
+        return sKey;
+    }   
       this.code = function(input){
-        sCode = input;
-        function toString(){return sCode};
-        return sCode;
+          sCode = input;
+          return sCode;
       }     
     }  
   }
-
+  if (event.type !== "keyup")
+  {
+    event.key = "none";
+    event.code = "none";
+  } 
    if (sGameState=="Splash"){
     reset();
     sGameState="Run";
@@ -110,7 +117,9 @@ function kpDown (event)
     DisplayCurPhrase()
   }
   else if (sGameState==="Run"){
-    if(event.code.toString().indexOf("Key")!=0){
+    var sEventCode = "";
+    sEventCode = event.code; 
+    if(sEventCode.indexOf("Key")!=0){
       return;
     }   
     RunPress(event);
