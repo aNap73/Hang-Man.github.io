@@ -29,7 +29,7 @@ function reset()
   Guessed = document.getElementById("divGuessed");
   CurPhrase = document.getElementById("CurPhrase");;
   GuessesLeft = document.getElementById("divGuessesLeft");
-  GuessPhrases = ["The Walking Dead", "Zombie", "Apocolypse", "Undead", "Baseball Bat","Survivor", "Cross Bow", "Just Stay Alive Somehow", "Grit", "Blood", "Gore", "House of the Dead", "John Romeo", "Skull", "Decompose"];
+  GuessPhrases = ["The Walking Dead", "Zombie", "Apocolypse", "Undead", "Baseball Bat", "Survivor", "Cross Bow", "Just Stay Alive Somehow", "Grit", "Blood", "Gore", "House of the Dead", "John Romeo", "Skull", "Decompose","Scavange", "Canabalize", "Putride", "Bloated Corpse", "Rotting Flesh", "Soldier", "Helicopter", "Rescue", "Cure"];
   ZombieParts = ["head.gif","body.gif","ArmLeft.gif","ArmRight.gif","LegLeft.gif","LegRight.gif"];
   GuessedLetters = [];
   sCurPhrase = "";  
@@ -125,11 +125,13 @@ function DisplayCurPhrase()
     GuessesLeft.innerText = "Guesses Left: " + iGuessesLeft;
     if(sWorkPhrase.indexOf("-")<0)
     {
+      document.getElementById("TaDa").play();
       iGamesWon++;
       resetWin();
+      GamesWonDiv.innerText = "Games Won: " + iGamesWon;
       DisplayCurPhrase();
     }
-    GamesWonDiv.innerText = "Games Won: " + iGamesWon;
+    
 }  
   
   
@@ -151,7 +153,7 @@ function RunPress(event)
     GuessedLetters.push(event.key);   
   }
 
-  if(sCurPhrase.indexOf(event.key)<0){
+  if((!bFound) && sCurPhrase.indexOf(event.key)<0){
     iGuessesLeft -= 1;
     var myitem;
     if (iGuessesLeft <=10)

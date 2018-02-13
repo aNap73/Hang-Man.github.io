@@ -201,7 +201,8 @@ body {
         
             }
     .divWon{
-        text-align: center;
+        
+        font-size: 2em;
     }
     .dead{
         text-align: center;
