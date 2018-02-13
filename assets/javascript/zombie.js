@@ -21,6 +21,7 @@ var GuessesLeft = document.getElementById("divGuessesLeft");
 var iGuessesLeft =  12;
 var iPart = 0;
 var iGamesWon=0;
+var sLastInputText = "";
 function reset()
 {
   iPart = 0;
@@ -148,6 +149,7 @@ function kpDown (event)
   }
   if(!bMusicOn){Music.pause();}
 }
+
 function DisplayCurPhrase()
 {
   //if(sGameState=="Over"){return;}
