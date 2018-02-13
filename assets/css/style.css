@@ -1,11 +1,12 @@
 body {
   font-size: 1.8em;
   font-family: "Butcherman", serif;
-  
+  font-weight: 600;
   background-image: url("../images/BackZombies.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: auto;
+
   color: rgb(62, 95, 12);
   text-shadow: 2px 2px rgb(250, 250, 250),
   3px 3px rgb(222, 247, 5),               
@@ -147,7 +148,7 @@ body {
       background-size: contain;
   }
   .splashinstruct{
-     font-size: .6em;
+     font-size: 1.5em;
      margin-top: 0%;
      text-align: center;
      opacity: 1;
@@ -167,7 +168,7 @@ body {
     .HangGround{
         position: relative;
         
-        padding: 10%;
+        padding: 8%;
         margin: 0;
         background-image: url("../images/gallows.gif");
         background-position: center;
@@ -177,19 +178,12 @@ body {
         }
     .PlayGround{
             padding: 5%;
+            
             font-size: 1.1em;
             background-color: black;
 
             }
-    .gametracktext{ 
-        font-size: .7em;  
-        text-align: center;  
-    }
-    .gametracktextleft{ 
-        font-size: .7em;  
-        text-align: left;  
-        background-color: black;
-    }
+
     .part{
         position: relative;
         padding: 17px 10px;
@@ -200,16 +194,36 @@ body {
         
         
             }
-    .divWon{
+    #divWon{
         
-        font-size: 2em;
+        font-size: 1em;
     }
     .dead{
+        font-size: 2em;
         text-align: center;
         padding: 10%;
     }
+    .gametracktext{ 
+        font-size: .9em;  
+        text-align: center;  
+    }
+    .gametracktextright{ 
+        
+        font-size: 1em;  
+        text-align: left;  
+        background-color: black;
+    }
+    .mobinput{
+        font-size: .8em;
+        background-color: lightgrey;
+    }
+    #RunDiv{
+        
+        font-size: 2em;
+    }
     #CurPhrase{
         font-size: 2em;
+        
     }
     #head{top: 50px; background-image: url("../images/partblank.gif");}
     #armL{top: 50px; left:-28px; background-image: url("../images/partblank.gif")}

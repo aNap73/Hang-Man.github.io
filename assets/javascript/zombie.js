@@ -1,3 +1,8 @@
+/*
+Zombie Hangman
+Anthony A. Napolitano
+© 2018 Feb 13, 2018
+*/
 var bMusicOn = true;
 var sGameState = "Splash";
 var SplashDiv = document.getElementById("SplashDiv");
@@ -8,7 +13,8 @@ var MusicLbl = document.getElementById("MusicLabel");
 var Guessed = document.getElementById("divGuessed");
 var CurPhrase = document.getElementById("CurPhrase");
 var GamesWonDiv = document.getElementById("divWon");
-var GuessPhrases = ["The Walking Dead", "Zombie", "Apocolypse", "Undead", "Baseball Bat","Survivor", "Cross Bow", "Just Stay Alive Somehow", "Grit", "Blood", "Gore", "House of the Dead", "John Romeo", "Skull", "Decompose"];
+var GuessPhrases = ["The Walking Dead", "Zombie", "Apocalypse", "Undead", "Baseball Bat","Survivor", "Cross Bow", "Just Stay Alive Somehow", "Grit", "Blood", "Gore", "Crawler", "Night of the Living Dead", "Vicera", "George A Romero", "Skull", "Decompose"];
+var ZombieParts = ["head.gif","body.gif","ArmLeft.gif","ArmRight.gif","LegLeft.gif","LegRight.gif"];
 var GuessedLetters = [];
 var sCurPhrase = "";
 var GuessesLeft = document.getElementById("divGuessesLeft");
@@ -21,21 +27,20 @@ function reset()
   /*bMusicOn = true;*/
   iGamesWon=0;
   sGameState = "Over";
+
   SplashDiv = document.getElementById("SplashDiv");
   RunDiv = document.getElementById("RunDiv");
   OverDiv = document.getElementById("OverDiv");
+  
+  
+  RunDiv.style = "display:none";
+  OverDiv.style = "display:none"; 
+
   Music = document.getElementById("MusicToggle");
   MusicLbl = document.getElementById("MusicLabel");
   Guessed = document.getElementById("divGuessed");
   CurPhrase = document.getElementById("CurPhrase");;
   GuessesLeft = document.getElementById("divGuessesLeft");
-  GuessPhrases = ["The Walking Dead", "Zombie", "Apocolypse", "Undead", "Baseball Bat", "Survivor", "Cross Bow", "Just Stay Alive Somehow", "Grit", "Blood", "Gore", "House of the Dead", "John Romeo", "Skull", "Decompose","Scavange", "Canabalize", "Putride", "Bloated Corpse", "Rotting Flesh", "Soldier", "Helicopter", "Rescue", "Cure"];
-  ZombieParts = ["head.gif","body.gif","ArmLeft.gif","ArmRight.gif","LegLeft.gif","LegRight.gif"];
-  GuessedLetters = [];
-  sCurPhrase = "";  
-  iGuessesLeft =  12;
-  Guessed.innerText = "Guessed: "
-
   var myitem;
   myitem=document.getElementById("head");
   myitem.style='background-image: url("./assets/images/partblank.gif")';
@@ -49,6 +54,13 @@ function reset()
   myitem.style='background-image: url("./assets/images/partblank.gif")';
   myitem=document.getElementById("legR");
   myitem.style='background-image: url("./assets/images/partblank.gif")';
+  GuessedLetters.splice(0,GuessedLetters.length);
+  
+  sCurPhrase = "";  
+  iGuessesLeft =  12;
+  Guessed.innerText = "Guessed: "
+
+
   sCurPhrase = GuessPhrases[Math.floor(Math.random() * GuessPhrases.length)]; 
   kpDown (); 
 }
@@ -76,7 +88,6 @@ function resetWin()
 }
 function kpDown (event) 
 {
-  
   if (sGameState=="Splash"){
     reset();
     sGameState="Run";
@@ -87,7 +98,9 @@ function kpDown (event)
     DisplayCurPhrase()
   }
   else if (sGameState==="Run"){
-    
+    if(event.code.toString().indexOf("Key")!=0){
+      return;
+    }   
     RunPress(event);
     DisplayCurPhrase();
   }
@@ -121,6 +134,7 @@ function DisplayCurPhrase()
       sWorkPhrase= sWorkPhrase.replace(sCurPhrase[i],"-");
      }       
     }
+    sWorkPhrase = sWorkPhrase.replace(" ", "  ");
     CurPhrase.innerText = sWorkPhrase;
     GuessesLeft.innerText = "Guesses Left: " + iGuessesLeft;
     if(sWorkPhrase.indexOf("-")<0)
