@@ -6,10 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Zombie Hangman</title>
   <link href="https://fonts.googleapis.com/css?family=Butcherman|Press+Start+2P|Rammetto+One" rel="stylesheet">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" href="./assets/css/style.css">
 </head>
-<body>
+<body onkeydown="kpDown(event)">
 
     <nav class="navbar navbar-default mynavbar" id="mynavid">
         <div class="container-fluid">
@@ -22,38 +22,67 @@
             </button>
             <div class="mylogo">Zombie Hangman</div>            
           </div>
-          <div id="navbar" class="navbar-collapse collapse">
-           
+          <div id="navbar" class="navbar-collapse collapse">           
             <ul class="nav navbar-nav navbar-right">
-              <li class="mymenu"><a>Reset</a></li>
-              <li class="mymenu"><a>Options</a></li>
+              <li class="mymenu"><a onclick="reset()">Reset</a></li>
+              <li class="mymenu"><a onclick="mnMusicToggle()" id="MusicLabel">Music: On</a></li>
               <li class="mymenu"><a>About</a></li>
-        
-
             </ul>
           </div><!--/.nav-collapse -->
         </div><!--/.container-fluid -->
       </nav>
     <div class="container-fluid main">  
-    <div class = "jumbotron GameSplash">
+    <div class = "jumbotron GameSplash" id="SplashDiv" >
           <div class="SplashAni">
              
           </div>
+          <div class="splashinstruct" id="lbl">
+              Hit any Key to Begin...the end...
+          </div>
     </div> 
-    <div class = "jumbotron GameRun">
-        <div class="">
-            Running...
+    <div class = "jumbotron GameRun container-fluid" id="RunDiv">
+        <div class="row">
+         <div class="col-md-12 gametracktext" id="CurPhrase"></div>
+        </div> 
+        <div class="row">
+        <div class="col-md-6">
+              <div class="HangGround">
+                  <div class= "part" id="head"></div>
+                  <div class= "part" id="armL"></div>
+                  <div class= "part" id="torso"></div>
+                  <div class= "part" id="armR"></div>
+                  <div class= "part" id="legL"></div>
+                  <div class= "part" id="legR"></div>                  
+              </div>
+        </div>   
+        <div class="col-md-6">
+                <div class="PlayGround"> 
+                    <div class="col-md-10 gametracktextleft" id="divGuessesLeft">Guesses Left:</div>                
+                    <div class="col-md-10 gametracktextleft" id="divGuessed">Guessed:<br></div>
+                    
+                </div>
+                
+        </div>    
+        </div>
+        <div class="row">
+          <div class="col-md-10 gametracktextleft">
+            <div id="divWon">Games Won: 0</div>
+          </div>
+        </div>
+        
+     </div>
+    
+    <div class = "jumbotron GameOver" id="OverDiv">
+        <div class="dead">
+            Game Over...
+            
+        </div>
+        <div class="splashinstruct" id="lbl2">
+            Hit any Key to Begin...the again...
         </div>
     </div> 
-    <div class = "jumbotron GameOver">
-        <div class="">
-            Over...
-        </div>
-    </div> 
-    <div class="splashinstruct">
-        Hit any Key to Begin...the end...
-    </div>
-      <audio controls loop autoplay id="audioSplash" style="display:none"/><source src="./assets/sounds/MusicBack2.mp3" type="audio/mpeg" autoplay=true></audio>    
+
+      <audio controls loop autoplay  id="MusicToggle" style="display:none"/><source src="./assets/sounds/MusicBack2.mp3" type="audio/mpeg" autoplay=true id="audioSplash"></audio>    
     </div>
     <!-- Bootstrap core JavaScript
     ================================================== -->
@@ -61,7 +90,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <!--script src="./assets/javascript/bootstrap.min.js"></script-->
-    <!--script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"--></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!--script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script-->
+    <script type="text/javascript" src="./assets/javascript/zombie.js"></script>
 </body>
 </html>

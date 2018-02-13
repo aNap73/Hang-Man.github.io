@@ -140,18 +140,19 @@ body {
 
   .SplashAni {
       position: relative;
-      padding: 10% 0;    
+      padding: 17%;    
       background-image: url("../images/zr1.gif");
       background-position: center;
       background-repeat: no-repeat;
       background-size: contain;
   }
-  .splashinstruct{  
-     margin-top: -1.5%;
+  .splashinstruct{
+     font-size: .6em;
+     margin-top: 0%;
      text-align: center;
      opacity: 1;
      background: #000;
-     font-size: 1.5em;
+
     }
     
     .main{
@@ -159,6 +160,59 @@ body {
 
     }
     .GameSplash{display:block;}
-    .GameRun{display:none;}
+    .GameRun{
+        display:none;
+    }
     .GameOver{display: none;}
+    .HangGround{
+        position: relative;
+        
+        padding: 10%;
+        margin: 0;
+        background-image: url("../images/gallows.gif");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
 
+        }
+    .PlayGround{
+            padding: 5%;
+            font-size: 1.1em;
+            background-color: black;
+
+            }
+    .gametracktext{ 
+        font-size: .7em;  
+        text-align: center;  
+    }
+    .gametracktextleft{ 
+        font-size: .7em;  
+        text-align: left;  
+        background-color: black;
+    }
+    .part{
+        position: relative;
+        padding: 17px 10px;
+   
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        
+        
+            }
+    .divWon{
+        text-align: center;
+    }
+    .dead{
+        text-align: center;
+        padding: 10%;
+    }
+    #CurPhrase{
+        font-size: 2em;
+    }
+    #head{top: 50px; background-image: url("../images/partblank.gif");}
+    #armL{top: 50px; left:-28px; background-image: url("../images/partblank.gif")}
+    #torso{top: 20px; left: 0px; background-image: url("../images/partblank.gif");}
+    #armR{top:  -15px; left: 28px; background-image: url("../images/partblank.gif")}
+    #legL{top: -20px; left:-25px; background-image: url("../images/partblank.gif")}
+    #legR{top: -45px; left: 25px; background-image: url("../images/partblank.gif")}
