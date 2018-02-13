@@ -90,24 +90,37 @@ function kpDown (event)
 {
   if (typeof event === 'undefined' || !event) {
     event = function(input){
-      this.sKey = "none";
-      this.sCode = "none"; 
+      var sKey = "";
+      var sCode ="";
       this.key = function(input){
         sKey = input;
         return sKey;
-    }   
+      }
       this.code = function(input){
-          sCode = input;
-          return sCode;
+        sCode = input;
+        return sCode;
+      }
+      this.Code = "none"; 
       }     
-    }  
-  }
+    }   
+   
+  
+  
+          
+  var txt = document.getElementById("txtinput");      
   if (event.type !== "keyup")
   {
     event.key = "none";
     event.code = "none";
-  } 
-   if (sGameState=="Splash"){
+   
+    if(txt.value.length>0){
+      event.key = txt.value;
+      event.code = "Key" + event.key;}
+     
+  }
+  txt.value = "";
+  
+  if (sGameState=="Splash"){
     reset();
     sGameState="Run";
     SplashDiv.style = "display: none";
