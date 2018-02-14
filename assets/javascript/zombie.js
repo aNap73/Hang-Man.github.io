@@ -13,7 +13,8 @@ var MusicLbl = document.getElementById("MusicLabel");
 var Guessed = document.getElementById("divGuessed");
 var CurPhrase = document.getElementById("CurPhrase");
 var GamesWonDiv = document.getElementById("divWon");
-var GuessPhrases = ["The Walking Dead", "Zombie", "Apocalypse", "Undead", "Baseball Bat","Survivor", "Cross Bow", "Just Stay Alive Somehow", "Grit", "Blood", "Gore", "Crawler", "Night of the Living Dead", "Vicera", "George A Romero", "Skull", "Decompose"];
+
+var GuessPhrases = ["The Walking Dead", "Zombie", "Apocalypse", "Undead", "Baseball Bat", "Survivor", "Cross Bow", "Just Survive Somehow", "Grit", "Blood", "Gore", "Crawler", "Night of the Living Dead", "Vicera", "George A Romero", "Skull", "Decompose", "Infection", "Rotting Flesh", "Pandemic", "Bite", "Virus", "Horde", "Shot Gun", "Putrid", "Fetid", "Chainsaw", "Fever", "Hemorrhage", "Starvation"];
 var ZombieParts = ["head.gif","body.gif","ArmLeft.gif","ArmRight.gif","LegLeft.gif","LegRight.gif"];
 var GuessedLetters = [];
 var sCurPhrase = "";
@@ -22,8 +23,35 @@ var iGuessesLeft =  12;
 var iPart = 0;
 var iGamesWon=0;
 var sLastInputText = "";
-function reset()
+var bKeyBoardOn = false;
+var KeyBoard = document.getElementById("Keyboard");
+var KeyboardToggle = document.getElementById("keyboardToggle")
+function customKeyCatch(myid)
 {
+  event = {
+    key:myid,
+    code:"Key" + myid,
+    type:"keyup"
+  }
+    kpDown(event);
+}
+function keyToggle()
+{
+  if(bKeyBoardOn){
+    KeyboardToggle.innerText="Keyboard: Off";
+    KeyBoard.style.display="none";
+    bKeyBoardOn=false;
+  }
+  else{
+    KeyboardToggle.innerText="Keyboard: On";
+    KeyBoard.style.display="inline-block";
+    
+    bKeyBoardOn=true;
+  }
+}
+function reset(bBoomBoom)
+{
+  if (bBoomBoom) {document.getElementById("BoomBoom").play();}
   iPart = 0;
   /*bMusicOn = true;*/
   iGamesWon=0;
