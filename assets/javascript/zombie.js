@@ -24,7 +24,7 @@ var iPart = 0;
 var iGamesWon=0;
 var sLastInputText = "";
 var bKeyBoardOn = false;
-var KeyBoard = document.getElementById("Keyboard");
+var KeyBoard = document.getElementById("KeyBoard");
 var KeyboardToggle = document.getElementById("keyboardToggle")
 function customKeyCatch(myid)
 {
@@ -39,13 +39,12 @@ function keyToggle()
 {
   if(bKeyBoardOn){
     KeyboardToggle.innerText="Keyboard: Off";
-    KeyBoard.style.display="none";
+    KeyBoard.style.display="none";    
     bKeyBoardOn=false;
   }
   else{
     KeyboardToggle.innerText="Keyboard: On";
-    KeyBoard.style.display="inline-block";
-    
+    KeyBoard.style.display="inline";    
     bKeyBoardOn=true;
   }
 }
@@ -136,18 +135,8 @@ function kpDown (event)
   
   
           
-  var txt = document.getElementById("txtinput");      
-  if (event.type !== "keyup")
-  {
-    event.key = "none";
-    event.code = "none";
-   
-    if(txt.value.length>0){
-      event.key = txt.value;
-      event.code = "Key" + event.key;}
-     
-  }
-  txt.value = "";
+  
+  
   
   if (sGameState=="Splash"){
     reset();

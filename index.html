@@ -29,12 +29,11 @@
             <ul class="nav navbar-nav navbar-right">
               <li class="mymenu"><a onclick="reset(true)">Reset</a></li>
               <li class="mymenu"><a onclick="mnMusicToggle()" id="MusicLabel">Music: On</a></li>
-              <li class="mymenu"><a id="keyboardToggle" onclick="keyToggle()">Keyboard(Off)</a></li>
+              <li class="mymenu"><a id="keyboardToggle" onclick="keyToggle()">Keyboard: Off</a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div><!--/.container-fluid -->
-      </nav>
-    <div class="container-fluid main">  
+    </nav>
     <div class = "jumbotron GameSplash" id="SplashDiv" >
           <div class="SplashAni">
              
@@ -42,8 +41,9 @@
           <div class="splashinstruct" id="lbl">
               Hit any Key to Begin... the end...
           </div>
-    </div> 
-    <div class = "jumbotron GameRun container-fluid" id="RunDiv">
+    </div>      
+    <div class = "jumbotron GameRun" id="RunDiv">
+
         <div class="row">
          <div class="col-md-12 gametracktext" id="CurPhrase"></div>
         </div> 
@@ -61,128 +61,69 @@
         <div class="col-md-6">
                 <div class="PlayGround"> 
                     <div class="col-md-10 gametracktextright" id="divGuessesLeft">Guesses Left:</div>                
-                    <div class="col-md-10 gametracktextright" id="divGuessed">Guessed:<br></div>
-                    
+                    <div class="col-md-10 gametracktextright" id="divGuessed">Guessed:<br></div>                    
                 </div>
                 
         </div>    
         </div>
-        <div class="col-md-12 gametracktext textinput" style="display:none" ><input  class="mobinput" id="txtinput" oninput("kpDown()") placeholder="No Keyboard? Guess Here..."></input></div> 
-          <div class="col-md-12 gametracktext" id="divWon">
+        <div class="row">
+        <div class="col-md-12 gametracktext" id="divWon">
             Games Won: 0
-          </div>
+        </div>
+        </div>  
+
+     <div style="display:none" class="container KeyBoard" id="KeyBoard">
+      <div class="row"><div class="col-md-12">Key Board</div></div>
+      <div class="row"> 
+      <div class="col-md-12">
+        
+          <span class="KEY" id="Key1" onclick="customKeyCatch('A')">A</span>
+          <span class="KEY" id="Key2" onclick="customKeyCatch('B')">B</span>
+          <span class="KEY" id="Key3" onclick="customKeyCatch('C')">C</span>
+          <span class="KEY" id="Key4" onclick="customKeyCatch('D')">D</span>
+          <span class="KEY" id="Key5" onclick="customKeyCatch('E')">E</span>
+          <span class="KEY" id="Key6" onclick="customKeyCatch('F')">F</span>
+          <span class="KEY" id="Key7" onclick="customKeyCatch('G')">G</span>
+          <span class="KEY" id="Key8" onclick="customKeyCatch('H')">H</span>
+          <span class="KEY" id="Key9" onclick="customKeyCatch('I')">I</span>
+          <span class="KEY" id="Key10" onclick="customKeyCatch('J')">J</span>
+          <span class="KEY" id="Key11" onclick="customKeyCatch('K')">K</span>
+          <span class="KEY" id="Key12" onclick="customKeyCatch('L')">L</span>
+          <span class="KEY" id="Key13" onclick="customKeyCatch('M')">M</span>
+          <span class="KEY" id="Key14" onclick="customKeyCatch('N')">N</span>
+          <span class="KEY" id="Key15" onclick="customKeyCatch('O')">O</span>
+          <span class="KEY" id="Key16" onclick="customKeyCatch('P')">P</span>
+          <span class="KEY" id="Key17" onclick="customKeyCatch('Q')">Q</span>
+          <span class="KEY" id="Key18" onclick="customKeyCatch('R')">R</span>
+          <span class="KEY" id="Key19" onclick="customKeyCatch('S')">S</span>
+          <span class="KEY" id="Key20" onclick="customKeyCatch('T')">T</span>
+          <span class="KEY" id="Key21" onclick="customKeyCatch('U')">U</span>
+          <span class="KEY" id="Key22" onclick="customKeyCatch('V')">V</span>
+          <span class="KEY" id="Key23" onclick="customKeyCatch('W')">W</span>
+          <span class="KEY" id="Key24" onclick="customKeyCatch('X')">X</span>
+          <span class="KEY" id="Key25" onclick="customKeyCatch('Y')">Y</span>
+          <span class="KEY" id="Key26" onclick="customKeyCatch('Z')">Z</span>
+        </div>
           
-     
-          <div class="Keyboard col-md-12" id="Keyboard" style="display:none">
-              <div class="container-fluid">
-                <div class="row">  
-                    <div class="col-md-1">
-                      <div class="KEY" onclick="customKeyCatch('A')" id="Key1">A</div>
-                    </div>
-                    <div class="col-md-1">
-                      <div class="KEY" onclick="customKeyCatch('B')" id="Key2">B</div>
-                    </div>
-                    <div class="col-md-1">
-                      <div class="KEY" onclick="customKeyCatch('C')" id="Key3">C</div>
-                    </div>
-                    <div class="col-md-1">
-                      <div class="KEY" onclick="customKeyCatch('D')" id="Key4">D</div>
-                    </div>
-                    <div class="col-md-1">
-                      <div class="KEY" onclick="customKeyCatch('E')" id="Key5">E</div>
-                    </div>
-                    <div class="col-md-1">
-                      <div class="KEY" onclick="customKeyCatch('F')" id="Key6">F</div>
-                    </div>
-                    <div class="col-md-1">
-                      <div class="KEY" onclick="customKeyCatch('G')" id="Key7">G</div>
-                    </div>
-                    <div class="col-md-1">
-                      <div class="KEY" onclick="customKeyCatch('H')" id="Key8">H</div>
-                    </div>
-                    <div class="col-md-1">
-                      <div class="KEY" onclick="customKeyCatch('I')" id="Key9">I</div>
-                    </div>
-                    <div class="col-md-1">
-                      <div class="KEY" onclick="customKeyCatch('J')" id="Key10">J</div>
-                    </div>
-                    <div class="col-md-1">
-                      <div class="KEY" onclick="customKeyCatch('K')" id="Key11">K</div>
-                    </div>
-                    <div class="col-md-1">
-                      <div class="KEY" onclick="customKeyCatch('L')"  id="Key12">L</div>
-                    </div>
-                  </div>
-                  <div class="row">
-                  <div class="col-md-1">
-                     <div class="KEY" onclick="customKeyCatch('M')" id="Key13">M</div>
-                  </div>
-                  <div class="col-md-1">
-                     <div class="KEY" onclick="customKeyCatch('N')" id="Key14">N</div>
-                  </div>
-                  <div class="col-md-1">
-                     <div class="KEY" onclick="customKeyCatch('O')"  id="Key15">O</div>
-                  </div>
-                  <div class="col-md-1">
-                    <div class="KEY" onclick="customKeyCatch('P')" id="Key16">P</div>
-                  </div>
-                  <div class="col-md-1">
-                    <div class="KEY" onclick="customKeyCatch('Q')" id="Key17">Q</div>
-                  </div>
-                  <div class="col-md-1">
-                    <div class="KEY" onclick="customKeyCatch('R')"  id="Key18">R</div>
-                  </div>
-                  <div class="col-md-1">
-                    <div class="KEY" onclick="customKeyCatch('S')" id="Key19">S</div>
-                  </div>
-                  <div class="col-md-1">
-                    <div class="KEY" onclick="customKeyCatch('T')" id="Key20">T</div>
-                  </div>
-                  <div class="col-md-1">
-                    <div class="KEY" onclick="customKeyCatch('U')" id="Key21">U</div>
-                  </div>
-                  <div class="col-md-1">
-                    <div class="KEY" onclick="customKeyCatch('V')" id="Key22">V</div>
-                  </div>
-                  <div class="col-md-1">
-                    <div class="KEY" onclick="customKeyCatch('W')" id="Key23">W</div>
-                  </div>
-                  <div class="col-md-1">
-                    <div class="KEY" onclick="customKeyCatch('X')" id="Key24">X</div>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-md-1">
-                    <div class="KEY" onclick="customKeyCatch('Y')" id="Key25">Y</div>
-                  </div>
-                  <div class="col-md-1">
-                    <div class="KEY" onclick="customKeyCatch('Z')" id="Key26">Z</div>
-                  </div>
-                </div>
-              </div>
-              </div>      
-
-
+      </div>
      </div>
-    
+
+
+      
+    </div>
     <div class = "jumbotron GameOver" id="OverDiv">
-        <div class="dead">
-            Game Over...
-            
-        </div>
-        <div class="splashinstruct" id="lbl2">
-            Hit any Key to Begin... again...
-        </div>
+      <div class="dead">
+          Game Over...
+      </div>
+      <div class="splashinstruct" id="lbl2">
+          Hit any Key to Begin... again...
+      </div>          
     </div>
-
-
-</div>  
-  </div>
+   
+    <audio controls loop autoplay  id="MusicToggle" style="display:none"/><source src="./assets/sounds/MusicBack2.mp3" type="audio/mpeg" autoplay=true id="audioSplash"></audio>    
+    <audio id="TaDa" style="display:none"/><source src="./assets/sounds/TaDa.mp3" type="audio/mpeg"></audio>    
+    <audio id="BoomBoom" style="display:none"/><source src="./assets/sounds/Winchester.mp3" type="audio/mpeg"></audio>    
     
-      <audio controls loop autoplay  id="MusicToggle" style="display:none"/><source src="./assets/sounds/MusicBack2.mp3" type="audio/mpeg" autoplay=true id="audioSplash"></audio>    
-      <audio id="TaDa" style="display:none"/><source src="./assets/sounds/TaDa.mp3" type="audio/mpeg"></audio>    
-      <audio id="BoomBoom" style="display:none"/><source src="./assets/sounds/Winchester.mp3" type="audio/mpeg"></audio>    
-    </div>
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
