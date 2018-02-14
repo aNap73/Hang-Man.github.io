@@ -155,7 +155,7 @@ body {
       background-size: contain;
   }
   .splashinstruct{
-     font-size: 1.5em;
+     font-size: .8em;
      margin-top: 0%;
      text-align: center;
      opacity: 1;
@@ -181,8 +181,7 @@ body {
 
         }
     .PlayGround{
-            padding: 5%;
-            
+            padding: 0 5% 0 5% 0;            
             font-size: 1.1em;
             background-color: black;
 
@@ -236,8 +235,11 @@ body {
     .KEY {
         font-size: .9em;
         padding: .8%;
+        
+        text-shadow: 0 0;
+        
         text-align:center;
-        background-color:rgb(168, 68, 68);
+        background-color:rgb(255, 255, 255);
         border-radius: 40%;
         opacity: 1;
         z-index: 10;
@@ -267,11 +269,15 @@ body {
     #legR{top: -45px; left: 25px; background-image: url("../images/partblank.gif")}
 
     @media screen and (max-width:426px) {
+       .body {
+           font-size:.8em;
+       }
        .mylogo{
-        font-size: 2.4em;
+        font-size: 2em;
        }
        #RunDiv{
         
         font-size: 1.2em;
-    }
+        }
+        
     }
