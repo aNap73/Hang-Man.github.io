@@ -230,14 +230,17 @@ body {
     .KeyBoard{
          width: 80%;
         text-align: center;
+        
         padding:1%; 
               }
     .KEY {
-        font-size: 1em;
-        padding: 0%;
+        font-size: .9em;
+        padding: .8%;
         text-align:center;
-        background-color:rgb(0,0,0);
-        border-radius: 0;
+        background-color:rgb(168, 68, 68);
+        border-radius: 40%;
+        opacity: 1;
+        z-index: 10;
     }
     .row.no-gutters {
         margin-right: 0;
@@ -263,6 +266,12 @@ body {
     #legL{top: -20px; left:-25px; background-image: url("../images/partblank.gif")}
     #legR{top: -45px; left: 25px; background-image: url("../images/partblank.gif")}
 
-    @media screen and (max-width:992px) {
-       
+    @media screen and (max-width:426px) {
+       .mylogo{
+        font-size: 2.4em;
+       }
+       #RunDiv{
+        
+        font-size: 1.2em;
+    }
     }

@@ -44,9 +44,22 @@
     </div>      
     <div class = "jumbotron GameRun" id="RunDiv">
 
-        <div class="row">
-         <div class="col-md-12 gametracktext" id="CurPhrase"></div>
-        </div> 
+
+
+            
+                    <div class="row">
+                    <div class="col-md-3 gametracktext" id="divWon">Games Won: 0</div>
+
+                    <div class="col-md-3 gametracktext" id="divGuessesLeft">Guesses Left:</div>                
+
+                    <div class="col-md-6 gametracktext" id="divGuessed">Guessed:</div>                    
+                    </div>
+
+
+
+
+
+         
         <div class="row">
         <div class="col-md-6">
               <div class="HangGround">
@@ -59,54 +72,67 @@
               </div>
         </div>   
         <div class="col-md-6">
-                <div class="PlayGround"> 
-                    <div class="col-md-10 gametracktextright" id="divGuessesLeft">Guesses Left:</div>                
-                    <div class="col-md-10 gametracktextright" id="divGuessed">Guessed:<br></div>                    
+                <div class="PlayGround">
+                        <div class="row">
+                                <div class="col-md-12 gametracktext" id="CurPhrase"></div>
+                        </div>
                 </div>
                 
         </div>    
         </div>
-        <div class="row">
+        <!--div class="row">
         <div class="col-md-12 gametracktext" id="divWon">
             Games Won: 0
         </div>
-        </div>  
+        </div-->  
 
-     <div style="display:none" class="container KeyBoard" id="KeyBoard">
-      <div class="row"><div class="col-md-12">Key Board</div></div>
-      <div class="row"> 
-      <div class="col-md-12">
+
         
-          <span class="KEY" id="Key1" onclick="customKeyCatch('A')">A</span>
-          <span class="KEY" id="Key2" onclick="customKeyCatch('B')">B</span>
-          <span class="KEY" id="Key3" onclick="customKeyCatch('C')">C</span>
-          <span class="KEY" id="Key4" onclick="customKeyCatch('D')">D</span>
-          <span class="KEY" id="Key5" onclick="customKeyCatch('E')">E</span>
-          <span class="KEY" id="Key6" onclick="customKeyCatch('F')">F</span>
-          <span class="KEY" id="Key7" onclick="customKeyCatch('G')">G</span>
-          <span class="KEY" id="Key8" onclick="customKeyCatch('H')">H</span>
-          <span class="KEY" id="Key9" onclick="customKeyCatch('I')">I</span>
-          <span class="KEY" id="Key10" onclick="customKeyCatch('J')">J</span>
-          <span class="KEY" id="Key11" onclick="customKeyCatch('K')">K</span>
-          <span class="KEY" id="Key12" onclick="customKeyCatch('L')">L</span>
-          <span class="KEY" id="Key13" onclick="customKeyCatch('M')">M</span>
-          <span class="KEY" id="Key14" onclick="customKeyCatch('N')">N</span>
-          <span class="KEY" id="Key15" onclick="customKeyCatch('O')">O</span>
-          <span class="KEY" id="Key16" onclick="customKeyCatch('P')">P</span>
-          <span class="KEY" id="Key17" onclick="customKeyCatch('Q')">Q</span>
-          <span class="KEY" id="Key18" onclick="customKeyCatch('R')">R</span>
-          <span class="KEY" id="Key19" onclick="customKeyCatch('S')">S</span>
-          <span class="KEY" id="Key20" onclick="customKeyCatch('T')">T</span>
-          <span class="KEY" id="Key21" onclick="customKeyCatch('U')">U</span>
-          <span class="KEY" id="Key22" onclick="customKeyCatch('V')">V</span>
-          <span class="KEY" id="Key23" onclick="customKeyCatch('W')">W</span>
-          <span class="KEY" id="Key24" onclick="customKeyCatch('X')">X</span>
-          <span class="KEY" id="Key25" onclick="customKeyCatch('Y')">Y</span>
-          <span class="KEY" id="Key26" onclick="customKeyCatch('Z')">Z</span>
-        </div>
-          
-      </div>
-     </div>
+        <div style="display:none" class="container KeyBoard" id="KeyBoard">
+                <div class="row"><div class="col-md-12">Key Board</div></div>
+                <div class="row"> 
+                  <div class="col-md-12">
+                          <span class="KEY" id="Key17" onclick="customKeyCatch('Q')">Q</span>
+                          <span class="KEY" id="Key23" onclick="customKeyCatch('W')">W</span>
+                          <span class="KEY" id="Key5" onclick="customKeyCatch('E')">E</span>
+                          <span class="KEY" id="Key18" onclick="customKeyCatch('R')">R</span>
+                          <span class="KEY" id="Key20" onclick="customKeyCatch('T')">T</span>
+                          <span class="KEY" id="Key25" onclick="customKeyCatch('Y')">Y</span>
+                          <span class="KEY" id="Key21" onclick="customKeyCatch('U')">U</span>
+                          <span class="KEY" id="Key9" onclick="customKeyCatch('I')">I</span>
+                          <span class="KEY" id="Key15" onclick="customKeyCatch('O')">O</span>
+                          <span class="KEY" id="Key16" onclick="customKeyCatch('P')">P</span>
+                  </div>        
+                </div>
+                <div class="row"> 
+                      <div class="col-md-12">
+                              <span class="KEY" id="Key1" onclick="customKeyCatch('A')">A</span>      
+                              <span class="KEY" id="Key19" onclick="customKeyCatch('S')">S</span>
+                              <span class="KEY" id="Key4" onclick="customKeyCatch('D')">D</span>
+                              <span class="KEY" id="Key6" onclick="customKeyCatch('F')">F</span>
+                              <span class="KEY" id="Key7" onclick="customKeyCatch('G')">G</span>
+                              <span class="KEY" id="Key8" onclick="customKeyCatch('H')">H</span>
+                              <span class="KEY" id="Key10" onclick="customKeyCatch('J')">J</span>
+                              <span class="KEY" id="Key11" onclick="customKeyCatch('K')">K</span>
+                              <span class="KEY" id="Key12" onclick="customKeyCatch('L')">L</span>
+                      </div>        
+                </div>      
+                <div class="row"> 
+                      <div class="col-md-12">
+                              <span class="KEY" id="Key26" onclick="customKeyCatch('Z')">Z</span>
+                              <span class="KEY" id="Key24" onclick="customKeyCatch('X')">X</span>
+                              <span class="KEY" id="Key3" onclick="customKeyCatch('C')">C</span>
+                              <span class="KEY" id="Key22" onclick="customKeyCatch('V')">V</span>
+                              <span class="KEY" id="Key2" onclick="customKeyCatch('B')">B
+                                  
+                              </span>
+                              <span class="KEY" id="Key14" onclick="customKeyCatch('N')">N</span>
+                              <span class="KEY" id="Key13" onclick="customKeyCatch('M')">M</span>
+                      </div>        
+                </div>
+                
+    </div>
+
 
 
       
