@@ -28,12 +28,14 @@ var KeyBoard = document.getElementById("KeyBoard");
 var KeyboardToggle = document.getElementById("keyboardToggle")
 function customKeyCatch(myid)
 {
+  
   event = {
     key:myid,
     code:"Key" + myid,
     type:"keyup"
   }
     kpDown(event);
+    
 }
 function keyToggle()
 {
