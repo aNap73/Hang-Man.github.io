@@ -243,7 +243,22 @@ body {
         border-radius: 40%;
         opacity: 1;
         z-index: 10;
+    
+        -webkit-transition: .4s;
+        transition: .4s;
     }
+    .KEY:hover{
+        background-color:greenyellow;
+        cursor: pointer;
+        -webkit-transition: .4s;
+        transition: .4s;
+    }   
+    .KEY:active{
+        background-color:white;
+        cursor: pointer;
+        -webkit-transition: .4s;
+        transition: .4s;
+    }    
     .row.no-gutters {
         margin-right: 0;
         margin-left: 0;

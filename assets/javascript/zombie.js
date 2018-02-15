@@ -26,6 +26,7 @@ var sLastInputText = "";
 var bKeyBoardOn = false;
 var KeyBoard = document.getElementById("KeyBoard");
 var KeyboardToggle = document.getElementById("keyboardToggle")
+var TypeMyKey = document.getElementById("TypeAKey");
 function customKeyCatch(myid)
 {
   
@@ -119,21 +120,13 @@ function resetWin()
 function kpDown (event) 
 {
   if (typeof event === 'undefined' || !event) {
-    event = function(input){
-      var sKey = "";
-      var sCode ="";
-      this.key = function(input){
-        sKey = input;
-        return sKey;
-      }
-      this.code = function(input){
-        sCode = input;
-        return sCode;
-      }
-      this.Code = "none"; 
+    event = {
+      code:"none",
+      key:"none",
+      type:"key"      
       }     
     }   
-   
+    TypeMyKey.play(); 
   
   
           
@@ -152,7 +145,7 @@ function kpDown (event)
   else if (sGameState==="Run"){
     var sEventCode = "";
     sEventCode = event.code; 
-    if(sEventCode.indexOf("Key")!=0){
+    if(sEventCode.indexOf("Key")<0){
       return;
     }   
     RunPress(event);
@@ -222,7 +215,7 @@ function RunPress(event)
     GuessedLetters.push(event.key);   
   }
 
-  if((!bFound) && sCurPhrase.indexOf(event.key)<0){
+  if((!bFound) && (sCurPhrase.toLowerCase()).indexOf(event.key.toLowerCase())<0){
     iGuessesLeft -= 1;
     var myitem;
     if (iGuessesLeft <=10)
