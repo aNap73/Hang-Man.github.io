@@ -27,6 +27,7 @@ var bKeyBoardOn = false;
 var KeyBoard = document.getElementById("KeyBoard");
 var KeyboardToggle = document.getElementById("keyboardToggle")
 var TypeMyKey = document.getElementById("TypeAKey");
+keyToggle();
 function customKeyCatch(myid)
 {
   
@@ -53,6 +54,7 @@ function keyToggle()
 }
 function reset(bBoomBoom)
 {
+  
   if (bBoomBoom) {document.getElementById("BoomBoom").play();}
   iPart = 0;
   /*bMusicOn = true;*/
@@ -115,7 +117,7 @@ function resetWin()
   myitem=document.getElementById("legR");
   myitem.style='background-image: url("./assets/images/partblank.gif")';
   sCurPhrase = GuessPhrases[Math.floor(Math.random() * GuessPhrases.length)];
-   
+  DisplayCurPhrase();
 }
 function kpDown (event) 
 {
@@ -187,11 +189,13 @@ function DisplayCurPhrase()
     GuessesLeft.innerText = "Guesses Left: " + iGuessesLeft;
     if(sWorkPhrase.indexOf("-")<0)
     {
-      document.getElementById("TaDa").play();
+      var MyNewTaDa = document.getElementById("TaDa"); 
       iGamesWon++;
       resetWin();
       GamesWonDiv.innerText = "Games Won: " + iGamesWon;
       DisplayCurPhrase();
+      MyNewTaDa.play();
+      
     }
     
 }  
