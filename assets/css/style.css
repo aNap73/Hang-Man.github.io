@@ -234,16 +234,14 @@ body {
               }
     .KEY {
         font-size: .9em;
-        padding: .8%;
-        
-        text-shadow: 0 0;
-        
+        padding: .7% 1.1%;
+        margin: 1px;        
+        text-shadow: 0 0;        
         text-align:center;
         background-color:rgb(255, 255, 255);
         border-radius: 40%;
         opacity: 1;
-        z-index: 10;
-    
+        z-index: 10;    
         -webkit-transition: .4s;
         transition: .4s;
     }

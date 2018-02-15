@@ -12,7 +12,7 @@
   <link href="https://fonts.googleapis.com/css?family=Anton|BioRhyme+Expanded|Butcherman|Creepster|Permanent+Marker" rel="stylesheet">
   <link rel="stylesheet" href="./assets/css/style.css">
 </head>
-<body onkeyup="kpDown(event)" onmouseup="kpDown(event)">
+<body onkeyup="kpDown(event)">
 
     <nav class="navbar navbar-default mynavbar" id="mynavid">
         <div class="container-fluid">
@@ -29,12 +29,12 @@
             <ul class="nav navbar-nav navbar-right">
               <li class="mymenu"><a onclick="reset(true)">Reset</a></li>
               <li class="mymenu"><a onclick="mnMusicToggle()" id="MusicLabel">Music: On</a></li>
-              <li class="mymenu"><a id="keyboardToggle" onclick="keyToggle()">Keyboard: Off</a></li>
+              <li class="mymenu"><a id="keyboardToggle" onclick="keyToggle()">Keyboard: On</a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div><!--/.container-fluid -->
     </nav>
-    <div class = "jumbotron GameSplash" id="SplashDiv" >
+    <div class = "jumbotron GameSplash" id="SplashDiv" onmouseup="kpDown(event)">
           <div class="SplashAni">
              
           </div>
@@ -42,7 +42,7 @@
               Hit any Key to Begin... the end...
           </div>
     </div>      
-    <div class = "jumbotron GameRun" id="RunDiv">
+    <div class = "jumbotron GameRun" id="RunDiv" onmouseup="kpDown(event)">
 
 
 
@@ -123,9 +123,7 @@
                               <span class="KEY" id="Key24" onclick="customKeyCatch('X')">X</span>
                               <span class="KEY" id="Key3" onclick="customKeyCatch('C')">C</span>
                               <span class="KEY" id="Key22" onclick="customKeyCatch('V')">V</span>
-                              <span class="KEY" id="Key2" onclick="customKeyCatch('B')">B
-                                  
-                              </span>
+                              <span class="KEY" id="Key2" onclick="customKeyCatch('B')">B</span>
                               <span class="KEY" id="Key14" onclick="customKeyCatch('N')">N</span>
                               <span class="KEY" id="Key13" onclick="customKeyCatch('M')">M</span>
                       </div>        
@@ -137,7 +135,7 @@
 
       
     </div>
-    <div class = "jumbotron GameOver" id="OverDiv">
+    <div class = "jumbotron GameOver" id="OverDiv" onmouseup="kpDown(event)">
       <div class="dead">
           Game Over...
       </div>
